@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "question": "What do I need to present to vote in Nigeria?",
+        "answer": "You must bring your valid physical Permanent Voter Card (PVC) and go to the polling unit where you are registered. INEC uses BVAS to verify voters.",
+        "source": "INEC Voter Education and Guidelines",
+        "source_url": "https://inecnigeria.org/voters/education"
+    },
+    {
+        "id": 2,
+        "question": "Who is eligible to register and vote in Nigerian elections?",
+        "answer": "According to INEC, an eligible person must be a Nigerian citizen aged 18 or older, reside or work in Nigeria, and complete voter registration with biometric enrolment at an INEC-designated registration centre.",
+        "source": "INEC Voter FAQs",
+        "source_url": "https://inecnigeria.org/voters/education?tab=faqs"
+    },
+    {
+        "id": 3,
+        "question": "What is BVAS?",
+        "answer": "BVAS means Bimodal Voter Accreditation System. It is used by INEC to verify and authenticate voters using biometric information.",
+        "source": "INEC Voter Education and Guidelines",
+        "source_url": "https://inecnigeria.org/voters/education"
+    }
+]

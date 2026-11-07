@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InclusiveVote AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <header>
+        <h1>InclusiveVote AI</h1>
+        <p>Accessible electoral information for everyone.</p>
+    </header>
+
+    <main>
+        <h2>Welcome</h2>
+
+<p>
+    Find clear and reliable information about
+    Nigerian electoral procedures.
+</p>
+
+<p>
+    Our goal is to make electoral information
+    easier for everyone to access and understand.
+</p>
+
+<section aria-labelledby="question-heading">
+    <h2 id="question-heading">Ask an Electoral Question</h2>
+
+    <form method="POST" action="/ask">
+        <label for="question">
+            What would you like to know?
+        </label>
+
+        <textarea
+            id="question"
+            name="question"
+            rows="5"
+            placeholder="Type your electoral question here..."
+        ></textarea>
+
+        <button type="submit">Ask Question</button>
+    </form>
+    {% if result %}
+    <div role="status" aria-live="polite">
+        <h3>Verified Information</h3>
+        <p>{{ result.answer }}</p>
+        <p>Source: {{ result.source }}</p>
+        <p>
+            <a href="{{ result.source_url }}" target="_blank" rel="noopener noreferrer">
+                Read the official source
+            </a>
+        </p>
+    </div>
+{% elif message %}
+    <div role="status" aria-live="polite">
+        <h3>Response</h3>
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+
+</section>
+    </main>
+
+</body>
+</html>
